@@ -1,6 +1,11 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    //глобальные переменные
+    public static class Example {
+        public static int a = 0;
+    }
+
     public static void main(String[] args) {
         // переменные
         var x = 1;
@@ -15,11 +20,27 @@ public class Main {
         print_all();
         System.out.println("          ");
         System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 + "       " + "1 - 0.5 = " + rovno2 + "       " + "1 * 0.5 = " + rovno3 + "       " + "1 / 0.5 = " + rovno4);
+        System.out.println("          ");
+        print_all();
 
     }
     // методы
     private static void print_all() {
-        System.out.println("проверка методов");
+        //переменные метода
+        var nol = 0 + Example.a;
+
+        //действие метода
+        System.out.println("проверка методов  " + nol);
+        nol++;
+        System.out.println("повтор метода  " + nol);
+        nol++;
+        System.out.println("следующее число  " + nol);
+        nol--;
+        System.out.println("-1 = " + nol);
+        Example.a = Example.a + 1;
+
+
+
     }
 }
 
