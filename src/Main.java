@@ -20,24 +20,24 @@ public class Main {
         print_all();
         System.out.println("          ");
         System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 + "       " + "1 - 0.5 = " + rovno2 + "       " + "1 * 0.5 = " + rovno3 + "       " + "1 / 0.5 = " + rovno4);
-        System.out.println("          ");
-        print_all();
+
 
     }
     // методы
     private static void print_all() {
         //переменные метода
         var nol = 0 + Example.a;
-
+        byte q = -12;
+        short w = 32_000;
+        int e = -200_000_0;
+        long r = 32_000_000_000L;
+        float t = -0.000_000_1f;
+        double y = 0.000_000_000_000_000_1;
         //действие метода
         System.out.println("проверка методов  " + nol);
-        nol++;
-        System.out.println("повтор метода  " + nol);
-        nol++;
-        System.out.println("следующее число  " + nol);
-        nol--;
-        System.out.println("-1 = " + nol);
-        Example.a = Example.a + 1;
+        System.out.println("имя переменной - тип переменной - значение:  "
+        + "q - byte - " + q + " / " + "w - short - " + w + " / " + "e - int - " + e + " / " + "r - long - " + r + " / " + "t - float - " + t + " / " + "y - double - " + y);
+
 
 
 
