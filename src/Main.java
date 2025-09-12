@@ -18,16 +18,23 @@ public class Main {
         //float (0.0000001) double (0.0000000000000001)
         // действия
         print_all();
-        System.out.println("          ");
-        System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 + "       " + "1 - 0.5 = " + rovno2 + "       " + "1 * 0.5 = " + rovno3 + "       " + "1 / 0.5 = " + rovno4);
+        System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 +"       1 - 0.5 = " + rovno2 + "       1 * 0.5 = " + rovno3 + "       1 / 0.5 = " + rovno4);
+
 
     }
     // методы
     private static void print_all() {
         //переменные метода
         var nol = Example.a + 1;
-        //действие метода
+        //действия метода
         System.out.println("проверка методов  " + nol);
+        System.out.println("          ");
+    }
+    private static void qw() {
+        //переменные метода
+        var nol = false;
+        //действия метода
+        System.out.println("        ");
     }
 }
 
