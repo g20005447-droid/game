@@ -18,6 +18,7 @@ public class Main {
         //float (0.0000001) double (0.0000000000000001)
         // действия
         print_all();
+        qw();
         System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 +"       1 - 0.5 = " + rovno2 + "       1 * 0.5 = " + rovno3 + "       1 / 0.5 = " + rovno4);
 
 
@@ -28,13 +29,14 @@ public class Main {
         var nol = Example.a + 1;
         //действия метода
         System.out.println("проверка методов  " + nol);
-        System.out.println("          ");
     }
+
     private static void qw() {
         //переменные метода
-        var nol = false;
+
         //действия метода
         System.out.println("        ");
+
     }
 }
 
