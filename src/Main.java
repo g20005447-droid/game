@@ -15,9 +15,15 @@ public class Main {
         var rovno3 = x * y;
         var rovno4 = x / y;
         int age = 18;
+        double firstNumber = 15;
+        double secondNumber = 25;
+        var operation = "*";
+        double result = 0;
+        var secretNumber = 45;
+        var playerGuess = 45;
         //byte (-128-127) short (-32 768-32 767) int (-2 147 483 648-2 147 483 647) long (-9 223 372 036 854 775 808-9 223 372 036 854 775 807)
-        //float (0.0000001) double (0.0000000000000001) + && = and
-        // switch (age) {case 18: default:}
+        //float (0.0000001) double (0.0000000000000001) + && = and и || = or
+        // switch (age) {case 18: default:} + if + String()?...:...;
         // действия
         System.out.println("Проверка switch и string");
         switch (age) {
@@ -67,10 +73,7 @@ public class Main {
         PR();
         System.out.println("проверка мат. действий  :  " + "1 + 0.5 = " + rovno1 +"       1 - 0.5 = " + rovno2 + "       1 * 0.5 = " + rovno3 + "       1 / 0.5 = " + rovno4);
         PR();
-        double firstNumber = 15;
-        double secondNumber = 25;
-        var operation = "*";
-        double result = 0;
+
 
         if (operation == "*") {
             result = firstNumber * secondNumber;
@@ -83,7 +86,12 @@ public class Main {
         } else {
             System.out.println("ОШИБКА");
         }
+
+
         System.out.println(result);
+
+        String str = (secretNumber == playerGuess) ? "Поздравляем! Вы угадали число!": "Вы не угадали. Попробуйте снова!";
+        System.out.println(str);
         PR();
         System.out.println("конец");
 
