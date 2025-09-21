@@ -13,7 +13,9 @@ public class Main {
         //float (0.0000001) double (0.0000000000000001) + && = and и || = or
         // switch (age) {case 18: default:} + if + String()?...:...;
         // действия
-
+        PR();
+        qw();
+        print_all();
     }
     // методы
     private static void print_all() {
