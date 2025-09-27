@@ -7,6 +7,10 @@
 //} while ()
 // int[] score = {5,4,2,5}; массив
 //String[] sience = {"Математика","Русский","История","География"}; массив
+//как узнавать , что я написал
+//import java.util.Scanner;
+//Scanner scanner = new Scanner(System.in);
+//var d = scanner.nextInt();
 public class Main {
     //глобальные переменные
     public static class Example {
