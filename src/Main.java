@@ -3,8 +3,8 @@
 // switch (age) {case 18: default:} + if + String()?...:...;
 // for(i=1,i>=0,i++) {}
 //while (?<=5) []
-//while {
-//} do ()
+//do {
+//} while ()
 // int[] score = {5,4,2,5}; массив
 //String[] sience = {"Математика","Русский","История","География"}; массив
 public class Main {
