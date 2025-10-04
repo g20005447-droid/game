@@ -20,27 +20,27 @@ public class Main {
     public static void main(String[] args) {
         // переменные
         // действия
-        PR();
-        qw();
-        print_all();
+        propusk();
+        bigPropusk();
+        metod_1();
     }
     // методы
-    private static void print_all() {
+    private static void metod_1() {
         //переменные метода
         var nol = Example.a + 1;
         //действия метода
         System.out.println("проверка методов  " + nol);
     }
 
-    private static void PR() {
+    private static void bigPropusk() {
         //переменные метода
 
         //действия метода
         System.out.println("________________________________________________________________________________________________________________________________________________________");
-
+        propusk();
     }
 
-    private static void qw() {
+    private static void propusk() {
         //переменные метода
 
         //действия метода
