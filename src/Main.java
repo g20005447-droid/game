@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 //byte (-128-127) short (-32 768-32 767) int (-2 147 483 648-2 147 483 647) long (-9 223 372 036 854 775 808-9 223 372 036 854 775 807)
 //float (0.0000001) double (0.0000000000000001) + && = and и || = or
 // switch (age) {case 18: default:} + if + String()?...:...;
@@ -11,6 +14,8 @@
 //import java.util.Scanner;
 //Scanner scanner = new Scanner(System.in);
 //var d = scanner.nextInt();
+//String[] goroda = {"Москва","Санкт-питербург","Минск","Уфа"};
+//for (String i: goroda) {}
 public class Main {
     //глобальные переменные
     public static class Example {
