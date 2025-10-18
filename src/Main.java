@@ -16,6 +16,7 @@ import java.util.List;
 //var d = scanner.nextInt();
 //String[] goroda = {"Москва","Санкт-питербург","Минск","Уфа"};
 //for (String i: goroda) {}
+import java.util.Scanner;
 public class Main {
     //глобальные переменные
     public static class Example {
@@ -24,7 +25,23 @@ public class Main {
 
     public static void main(String[] args) {
         // переменные
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        //Patern patren = Patren.complete("")
+        //String str = "Java world";
+        //char a = str.charAt(0);
+        //String subster_2 = str.substring(0, 8);
+        //int index1 = str.indexOf('l');
+        //int index2 = str.lastIndexOf('v');
+        //System.out.println(str.toLowerCase());
+        //System.out.println(str.toUpperCase());
+        //String formated = String.format("Привет, %s! Тебе %d лет," , "Иван", 17);
+        //double price = 123.111;
+        //String message = String.format("Цена: %.2f руб." , price);
+        //System.out.println(message);//Цена: 123,11 руб. 2f = 2 знака после запятой
         // действия
+
+
         propusk();
         bigPropusk();
         metod_1();
