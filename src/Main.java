@@ -26,160 +26,148 @@
 //String message = String.format("Цена: %.2f руб." , price);
 //System.out.println(message);//Цена: 123,11 руб. 2f = 2 знака после запятой
 
-class Car {
-    private String brand;
-    private String model;
-    private int year;
+class Employee {
+    private String name;
+    private int id;
+    private int department;
+    private static int counter = 1;
+    private double salary;
 
-    void setBrand(String brand) {
-        this.brand = brand;
-    }
-    void setModel(String model) {
-        this.model = model;
-    }
-    void setYear(int year) {
-        this.year = year;
-    }
-    String getBrand() {
-        return brand;
-    }
-    String getModel() {
-        return model;
-    }
-    int getYear() {
-        return year;
+    public Employee(String name, int department , double salary) {
+        this.id = counter++;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
     }
 
-    void startEngine() {
-        System.out.println("Двигатель запущен");
+    public String getName() {
+        return name;
     }
-    void stopEngine() {
-        System.out.println("Двигатель остановлен");
-    }
-}
-class test_1_car extends Exception {
-    public test_1_car(String message) {
-        super(message);
-    }
-}
-class ElectricCar extends Car {
-    public int batery;
-    private String Cachestvo;
-
-    public void test() throws test_1_car {
-        if ((getBrand() == null) && (getModel() == null) && (getYear() == 0) && (getBatery() == 0) && (getCachestvo() == null)) {
-            throw new test_1_car("Вы не заполнили информацию о машине");
-        }
+    public double getSalary() {
+        return salary;
     }
 
-    void setCachestvo(String Cachestvo) {
-        this.Cachestvo = Cachestvo;
+    public int getDepartment() {
+        return department;
     }
-    void setBatery(int batery) {
-        this.batery = batery;
+    public int getId() {
+        return id;
     }
-    String getCachestvo() {
-        return Cachestvo;
+    public void setDepartment(int  department) {
+        this.department = department;
     }
-    int getBatery() {
-        return batery;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
-    @Override
-    void startEngine() {
-        System.out.println("Электродвигатель запущен");
-    }
-    @Override
-    void stopEngine() {
-        System.out.println("Электродвигатель остановлен");
+    public void setName(String name) {
+        this.name = name;
     }
 
-    boolean testBatery() {
-        boolean tr = false;
-        if (batery < 20) {
-            System.out.println("Батарея разряжена , зарядите");
-            tr = true;
-        }
-        return tr;
+    public String getEmployeeInfo() {
+        return "Сотрудник " + getId() + "\n" +
+                "Имя" + getName() + "\n" +
+                "Отдел: отдел №" + getDepartment() + "\n" +
+                "Зарплата : " + getSalary() + "\n";
+    }
+    public String getAllNames() {
+        return "Имя сотрудника " + getName() + "\n";
     }
 }
 
-class CarData {
-    private String brand1;
-    private String model1;
-    private int year1;
-
-    void setBrand1(String brand) {
-        this.brand1 = brand;
-    }
-    void setModel1(String model) {
-        this.model1 = model;
-    }
-    void setYear1(int year) {
-        this.year1 = year;
-    }
-    String getBrand1() {
-        return brand1;
-    }
-    String getModel1() {
-        return model1;
-    }
-    int getYear1() {
-        return year1;
-    }
-}
-class CarServise extends CarData{
-    void print_all_info() {
-        System.out.println("Бренд : " + getBrand1());
-        System.out.println("Модель : " + getModel1());
-        System.out.println("Год выпуска : " + getYear1());
-    }
-}
-
-class FunctionalCar {
-    private String brand2;
-    private String model2;
-    private int year2;
-    void startAndPrintInfo() {
-        System.out.println("Start motor car");
-        System.out.println("Бренд : " + brand2);
-        System.out.println("Модель : " + model2);
-        System.out.println("Год выпуска : " + year2);
-
-    }
-}
 
 public class Main {
+    private static Employee[] employees = new Employee[10];
     //глобальные переменные
     public static class Example {
         public static int a = 0;
     }
 
-    public static void main(String[] args) {
-        // переменные
-        //задачи 1-5
-        ElectricCar newCar = new ElectricCar();
-        newCar.setBrand("AUDI");
-        newCar.setModel("IDK");
-        newCar.setYear(2015);
-        newCar.setBatery(25);
-        //задача 6
+    public static void printEmployeesInfo() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(
+                        "Сотрудник " + employee.getId() + "\n" +
+                        "Имя" + employee.getName() + "\n" +
+                        "Отдел: отдел №" + employee.getDepartment() + "\n" +
+                        "Зарплата : " + employee.getSalary() + "\n"
+                );
 
-        // действия
-        //задачи 1-5
-        try {
-            System.out.println("Информация о машине:");
-            newCar.test();
-        } catch (test_1_car e) {
-            System.out.println("ОШИБКА!!! " + e.getMessage());
-        } finally {
-            System.out.println(newCar.getBrand());
-            System.out.println(newCar.getModel());
-            System.out.println(newCar.getYear());
-            System.out.println(newCar.getBatery());
+            }
 
         }
-        //задача 6
-        System.out.println("Я не знаю как сделать пункт 6.4 , но для меня удобнее разделять по классам переменные с геттерами и ссетарами чем объеденённый класс");
+    }
+    public static void printAllNames() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(
+                        "Имя сотрудника = " + employee.getName() + "\n"
+                );
+            }
+        }
+    }
+
+    public static double getSumSalary() {
+        double sum = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                sum += employee.getSalary();
+            }
+        }
+        return sum;
+    }
+
+    public static Employee getEmployeWithMinSalary() {
+        Employee minEmployee = employees[0];
+        for (Employee employee : employees) {
+            if (employee != null && employee.getSalary() < minEmployee.getSalary()) {
+                minEmployee = employee;
+            }
+        }
+        return minEmployee;
+    }
+
+    public static Employee getEmployeWithMaxSalary() {
+        Employee maxEmployee = employees[0];
+        for (Employee employee : employees) {
+            if (employee != null && employee.getSalary() > maxEmployee.getSalary()) {
+                maxEmployee = employee;
+            }
+        }
+        return maxEmployee;
+    }
+
+    public static double getAverageSalary() {
+        double CP = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                CP++;
+            }
+        }
+        return getSumSalary() / CP;
+    }
+
+    public static void main(String[] args) {
+        // переменные
+        employees[0] = new Employee("Test Test Test", 1 , 10000);
+        employees[1] = new Employee("Start Start Start", 2 , 15500);
+        employees[2] = new Employee("Reset Reset Reset", 5 , 13500);
+        employees[3] = new Employee("Stop Stop Stop", 3 , 20000);
+        employees[4] = new Employee("Reget Reget Reget", 5 , 13500);
+        employees[5] = new Employee("Set Set Set", 1 , 23500);
+        employees[6] = new Employee("Get Get Get", 3 , 14500);
+        employees[7] = new Employee("Starer Starer Starer", 2 , 13000);
+        employees[8] = new Employee("Stoper Stoper Stoper", 4 , 17500);
+        employees[9] = new Employee("Retest Retest Retest", 1 , 19500);
+
+        // действия
+        System.out.println("Сумма всех зарплат : ");
+        System.out.println(getSumSalary());
+        System.out.println();
+        printEmployeesInfo();
+        System.out.println(getEmployeWithMinSalary().getEmployeeInfo());
+        System.out.println(getEmployeWithMaxSalary().getEmployeeInfo());
+        System.out.println(getAverageSalary());
+        printAllNames();
         bigPropusk();
         metod_1();
     }
